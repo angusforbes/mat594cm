@@ -1,0 +1,375 @@
+
+div.container {min-height:10em;
+    display: table-cell;
+    vertical-align: middle;
+    border:2px solid black;
+}
+
+a:link{
+    color: black;
+}
+a:link:hover{
+    color:black;
+}
+a:visited{
+    color: black;
+}
+a:visited:hover{
+    color:black;
+	}
+
+
+.main
+{
+    background:white; /*#b4d5fe;*/ /*white*/;
+    font-size:12px; /*1.1em;*/
+    font-weight:normal; /*bold;*/
+    font-family:Verdana;
+    color:black; /*#4790be;*/
+    margin-left:50px;
+    margin-right:0px;
+    margin-top:30px;
+    /*width:619px;*/
+    margin-left:10px;
+    margin-right:15px;
+
+  text-align:justify;
+  text-align:left;
+
+}
+
+.subtitle
+{
+    font-size:18px; /*1.1em;*/
+    font-weight:normal; /*bold;*/
+    font-family:Verdana;
+    color:#4790be;
+}
+.subtitle2
+{
+    font-size:14px; /*1.1em;*/
+    font-weight:normal; /*bold;*/
+    font-family:Verdana;
+    color:#54A754;
+
+
+}
+
+
+.title1
+{
+    font-size:24px; /*1.1em;*/
+    font-weight:normal; /*bold;*/
+    font-family:Verdana;
+    color:#4790be;
+}
+
+.title2
+{
+    font-size:16px; /*1.1em;*/
+    font-weight:normal; /*bold;*/
+    font-family:Verdana;
+    font-style:italic;
+    color:#4790be;
+    color:#54A754;
+}
+.os
+{
+   font-size:14px; /*1.1em;*/
+    font-weight:normal; /*bold;*/
+    font-family:Monaco;
+    font-style:italic;
+    color:#4790be;
+}
+table
+{
+    font-size:11px; /*1.1em;*/
+    font-weight:normal; /*bold;*/
+    font-family:Monaco, Verdana;
+
+  margin-left:-3px;
+    margin-right:0px;
+
+}
+
+td
+{
+   width:75px;
+   text-align:center;
+}
+
+
+
+.nameheader
+{
+    background:white; /*#b4d5fe;*/ /*white*/;
+    position:absolute;
+    /*left:190px;*/
+    left:170px;
+
+    /*left:0px;
+    text-align:right;
+    width:140px;
+    */
+
+    top:37px;
+    top:45px;
+    /*left:135px;*/
+    /*top:62px;*/
+    height:25px;
+    border-bottom:blue solid 0px;
+    font-size:12px; /*1.1em;*/
+    font-weight:normal; /*bold;*/
+    font-style:italic;
+    font-family:Monaco,Georgia,Arial;
+    color:#4790be;
+    
+      text-align:left;
+      width:85%;
+    
+
+
+}
+
+.topicheader
+{
+    background:transparent;
+    /*background:#b4d5fe;*/
+    position:absolute;
+    /*left:380px;*/
+   /* left:417px;*/
+    left:315px;
+    /*left:170px;*/
+    /*top:62px;*/
+    top:37px;
+    top:45px;
+   
+    width:600px;
+    /*height:25px;*/
+    height:25px;
+    border-bottom:blue solid 0px;
+    font-size:12px;
+    font-weight:bold;
+    font-weight:normal;
+    font-style:normal;
+    font-family:Monaco,Georgia,Arial;
+    text-align:left;
+    color:#006600;
+    color:#54A754;
+    /*color:transparent;*/
+}
+
+.myname
+{
+    background:white;
+    position:absolute;
+    left:0px;
+    top:50px;
+    width:130px;
+    height:20px;
+    border-bottom:gray solid 0px;
+    font-size:1.2em;
+    font-weight:bold;
+    font-family:Georgia, Arial;
+    text-align:right;
+    color:gray;
+
+}
+
+.myname2
+{
+
+    background:white;
+    position:absolute;
+    left:135px;
+    top:50px;
+    width:140px;
+    height:20px;
+    border-bottom:gray solid 0px;
+	font-size:1.2em;
+    font-weight:bold;
+    font-family:Georgia, Arial;
+    text-align:left;
+    color:gray;
+
+}
+.myname222
+{
+
+    background:white;
+    position:absolute;
+    left:390px;
+    top:-300px;
+    width:360px;
+    height:50px;
+    border:red solid 0px;
+    font-size:1.6em;
+    font-weight:bold;
+    font-family:Arial;
+    text-align:left;
+    color:black;
+
+}
+.centerer
+{
+    background:white;
+    position:absolute;
+    left:0px;
+    top:20%;
+}
+
+.middler
+{
+    background:white;
+    position:absolute;
+    left:0px;
+    top:-100px;
+    width:940px;
+    height:200px;
+    border:red solid 0px;
+}
+
+.normalMenu
+{
+    background:white;
+    color:black;
+    font-size:12px;
+    font-weight:normal;
+}
+
+
+.linkMenu
+{
+    background:white;
+   	/*text-decoration: underline;*/
+    border:red solid 1px;
+    color:black;
+    font-size:12px;
+    font-weight:normal;
+
+}
+.subHeaderMenu
+{
+    background:white; /*orange;*/
+    color:black;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.bandname
+{
+    font-size:12px;
+    font-weight:normal;
+    font-family:Monaco,Verdana;
+    font-style:normal;
+    text-align:left;
+    /*color:black;*/
+    color:#4790be;
+    /*color:blue;*/
+}
+
+.photo
+{
+ border:#4790be solid 2px;
+ border:#006600 solid 2px;
+ border:#54A754 solid 1px;
+ border:black solid 1px;
+ }
+
+.postname
+{
+  vertical-align:top;
+   /* font-size:12px; */
+    font-weight:normal;
+    font-family:Verdana;
+    font-style:normal;
+    text-align:left;
+    /*color:black;*/
+    color:#4790be;
+    /*margin:10px;*/
+    width:57px;
+    /*height:20px;*/
+    /*color:blue;*/
+    /*line-height:20px;*/
+}
+
+.post
+{
+  vertical-align:top;
+   /* font-size:12px; */
+    font-weight:normal;
+    font-family:Verdana;
+    font-style:normal;
+    text-align:left;
+    color:black;
+    /*margin:10px;*/
+    /*height:20px;*/
+    /*color:blue;*/
+    /*line-height:20px;*/
+}
+
+.col1
+{
+    background:white;
+    color:black;
+    font-size:8px; /*.7em;*/
+    font-weight:bolder;
+    font-family:Monaco,Georgia, Arial;
+    position:absolute;
+    text-align:right;
+    left:0px;
+    top:75px;
+    width:140px;
+    height:200px;
+    border-bottom:red solid 0px;
+}
+
+
+.col2
+{
+    background:white;
+    color:black;
+ /*   font-size:.8em; */
+    font-weight:normal;
+    font-family:Georgia, Arial;
+    text-align:left;
+    position:absolute;
+    left:135px;
+    top:150px;
+    width:200px;
+    height:200px;
+    border-bottom:red solid 0px;
+}
+
+.contentDiv
+{
+    /*
+    background:white;
+    color:black;
+    font-size:.7em;
+    font-weight:normal;
+    font-family:verdana,Georgia,Monaco;
+    */
+    text-align:left;
+    position:absolute;
+    left:170px;
+    top:75px;
+    height:100%;
+    width:65%;
+    /*top:125px;*/
+    /*left:190px;*/
+    /*width:700px;*/
+}
+    
+
+
+.page
+{
+    background:white;
+    color:black;
+    font-size:11px; /*.7em;*/
+    font-weight:normal;
+    font-family:verdana,Georgia,Monaco;
+    text-align:justify;
+}
+
