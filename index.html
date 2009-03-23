@@ -4,267 +4,162 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>MAT 594CM : Functions & Algorithms for Visualization</title>
+    <title>MAT 594CM : Computational Methods in Space and Form</title>
     <link rel="stylesheet" type="text/css" href="mat594cm.css" />
 
   </head>
   <body>
     <div class="main">
-      <a class="title1">Functions & Algorithms for Visualization</a>&nbsp;&nbsp;
-      <br><a class="title2">MAT 594CM, Spring 2009</a><p>
+      <!--<a class="title1">Computational Methods: Space and Form</a>-->
+      <a class="title1">Fundamentals of Spatial Computing</a>
+      <br>
+      <a class="title2">MAT 594CM S2009</a>
+      <br>
 
-<!--
-        <table>
-  <tr>
-    <td>
-<img class="photo" src="jmc1.jpg">
-  </td>
-  <td>
-<img class="photo" src="jmc4.jpg">
-  </td>
-  <td>
-<img class="photo" src="jmc3.jpg">
-  </td>
-  <td>
-<img class="photo" src="jmc5.jpg">
-  </td>
-  </tr>
-  </table>
-  -->
-  <p>
-      This course investigates the fundamentals of Computer Graphics, with some attention to
-      mathematical foundations and practical techniques for using real-time 3D graphics via
-      openGL and GLSL. We will explore various topics related to computational geometry and
-      visualization, including
-      curves and surfaces, space-partitioning, collision detection, and kinematics.
+       <a class="title2">Angus Forbes & Wesley Smith, Instructors</a>
+       <p>&nbsp;<p>
+
+        <img width=140 height=140 src="process1a_thumb.jpg"/>
+        <img width=140 height=140 src="process1d_thumb.jpg"/>
+        <img width=140 height=140 src="process1c_thumb.jpg"/>
+        <img width=140 height=140 src="process1b_thumb.jpg"/>
+       <p>&nbsp;<p>
+      <a class="week">Description</a>
       <p>
-      Students will be required to create a final programming project as well as complete one or two
-      problem sets. No prerequisites are required, although some basic knowledge of programming
-      is assumed.
+
+      This course provides a foundation for computing in multidimensional
+      spaces, investigating the synthetic and generative potentials of
+      elementary geometric constructs.  Subjects covered will include vector
+      and matrix math, space partitioning, collision detection, and
+      kinematics.  We will focus both on mathematical foundations and
+      practical computational techniques for creating real-time 3D graphics
+      via OpenGL.
+      <p> Students will produce a number of investigations into the
+      topics covered, culminating in a final programming project.  No
+      prerequisites are required, although some basic knowledge of
+      programming is assumed. The course will consist of one lecture class
+      and one lab class per week.
+
+
       <p>
-      The course will consist of one lecture class and one lab class each week.
-      <p>
-      Week 1: Space
+      
+      <a class="week">Week 1: Space</a>
+
       <p>
       Introduction to openGL, vectors, matrices, homogenous coordinates,
       transformations,
       <p>
-      Week 2: Thinking in Space (2D)
+
+      <a class="week">Week 2: Thinking in Space (2D)</a>
+
       <p>
       Convex hull algorithms, voronoi diagrams and delaunay triangulation
 
+      <p>
+      <a class="week">Week 2: Thinking in Space (2D)</a>
 
-      <p>
-      <table>
-        <tr>
-          <td class="os"> OSX </td> <td> video? </td> <td> sound? </td> <td> backwards? </td> <td> streaming? </td> <td> codecs? </td>
-        </tr>
-        <tr>
-          <td> .mov </td> <td> yes </td> <td> yes </td> <td> yes </td> <td> yes </td> <td> no </td>
-        </tr>
-        <tr>
-          <td> .flv </td> <td> yes </td> <td> yes </td> <td> no </td> <td> yes </td> <td> no </td>
-        </tr>
-        <tr>
-          <td> .ogg </td> <td> yes </td> <td> yes </td> <td> ? </td> <td> ? </td> <td>
-          <a href="http://www.xiph.org/quicktime/download.html">xiph</a> </td>
-        </tr>
-        <tr>
-          <td> .3gp </td> <td> yes </td> <td> yes </td> <td> yes </td> <td> ? </td> <td> no </td>
-        </tr>
-        <tr>
-          <td> .avi </td> <td> yes </td> <td> no </td> <td> no </td> <td> ? </td> <td> no </td>
-        </tr>
-        <tr>
-          <td> .mp4 </td> <td> yes </td> <td> yes </td> <td> no </td> <td> ? </td> <td> no </td>
-        </tr>
+      matrices
+      - 3x3 as a vector space
+      - 4x4 as a homogenous vector space
+      - how to construct orthogonal vector spaces
+      - conditions under which transpose == inverse and it's application in graphics
+      - e.g. gl_ModelViewMatrix == gl_NormalMatrix when scale is (1., 1., 1.)
+      - billboarding
 
-        <tr><td>&nbsp;</td></tr>
 
-        <tr>
-          <td class="os"> Windows </td> <td> video? </td> <td> sound? </td> <td> backwards? </td> <td> streaming? </td> <td> codecs? </td>
-        </tr>
-        <tr>
-          <td> .wmv </td> <td> yes </td> <td> yes </td> <td> ? </td> <td> ? </td> <td> no </td>
-        </tr>
-        <tr>
-          <td> .mov </td> <td> yes </td> <td> yes </td> <td> yes </td> <td> yes </td> <td> no </td>
-        </tr>
-        <tr>
-          <td> .flv </td> <td> yes </td> <td> yes </td> <td> no </td> <td> yes </td> <td>
-          <a href="http://codecguide.com/download_kl.htm">k-lite</a> </td>
-        </tr>
-        <tr>
-          <td> .ogg </td> <td> ? </td> <td> ? </td> <td> ? </td> <td> ? </td> <td> ? </td>
-        </tr>
-        <tr>
-          <td> .3gp </td> <td> yes </td> <td> yes </td> <td> yes </td> <td> ? </td> <td> no </td>
-        </tr>
+      vectors
+      - normalized
+      - how to handle the edge cases where magnitde ~ precision of float type
+      - cross product/dot product/geometric product
+      - meaning and usefulness
+      - sphere/ray intersection
+      - 3D picking
 
-        <tr><td>&nbsp;</td></tr>
+      - how to stroke a path (defined in 2d, ambiguous in 3d)
 
-        <tr>
-          <td class="os"> Ubuntu </td> <td> video? </td> <td> sound? </td> <td> backwards? </td> <td> streaming? </td> <td> codecs? </td>
-        </tr>
-        <tr>
-          <td> .flv </td> <td> yes </td> <td> yes </td> <td> yes </td> <td> yes </td> <td> no </td>
-        </tr>
-        <tr>
-          <td> .ogg </td> <td> yes </td> <td> yes </td> <td> ? </td> <td> ? </td> <td> no </td>
-        </tr>
-        <tr>
-          <td> .mov </td> <td> yes </td> <td> yes </td> <td> yes </td> <td> yes </td> <td> no </td>
-        </tr>
-      </table>
 
-      <br>
-      <a class="subtitle">downloads for Processing</a>
-      <p>
-        <a class="subtitle2">libraries</a>
-        <p>
+      composing vector fields
+      - gravity
+      - planetary
+      - magentic
+      - vortex
+      - stochastic
+      - perlin noise
+      - gaussian
+      - ...
 
-      <a href="http://www.mat.ucsb.edu/~a.forbes/PROCESSING/jmcvideo_files/jmcvideo_libraries_macosx.zip">
-        jmcvideo</a> library for osx
-      <br>
-      <a href="http://www.mat.ucsb.edu/~a.forbes/PROCESSING/jmcvideo_files/jmcvideo_libraries_windows.zip">
-        jmcvideo</a> library for windows
-      <br>
-      <a href="http://www.mat.ucsb.edu/~a.forbes/PROCESSING/jmcvideo_files/jmcvideo_libraries_linux.zip">
-        jmcvideo</a> library for linux
-      <p>
+      - emitters
+      - point
+      - spherical
+      - cube
+      - line
 
-      <a class="subtitle2">demos</a>
-        <p>
+      - integration techniques
+      - discrete calculus
+      - euler (explicit/implicit)
+      - R-K
+      - verlet
+      - when/where to apply
 
-      <a href="http://www.mat.ucsb.edu/~a.forbes/PROCESSING/jmcvideo_files/jmcvideo_basic_examples.zip">basic examples</a>,
-      which have been tested on all platforms:
-      <p>
-      <i>VideoLoop</i> & <i>VideoTextureLoop</i>: Just like the Loop example sketch for Processing's Movie library.
-      <p>
-      <a href="http://www.mat.ucsb.edu/~a.forbes/PROCESSING/jmcvideo_files/jmcvideo_demo_sketches.zip">advanced examples</a>,
-      which may or may not work on all platforms and may include platform specific media files. These include:
-      <p>
+      - steering behaviors
 
-      <i>VideoJMC</i> : a basic demo of a video player using the JMCMovie renderer.
-      <p>
-      <i>VideoTexture</i> : a basic demo using using the VideoGL renderer,
-      allows the user to switch videos, seek within videos, set the speed of the videos
-      (including backwards playback).
-      <p>
-      <i>VideoPoints</i> : a demo that converts the video to points. Moving the mouse up/down controls the transparency of the points; moving the mouse left/right controls the size of the points. Pressing the up/down arrow keys changes the number of points along the y axis; pressing the left/right arrow keys changes the number of points along the x axis
-      <p>
-      <i>VideoPointMagnifier</i> : a demo that converts the video to points. Moving the mouse controls the center of the point magnifier. See the program itself for all the keyboard options.
-      <p>
-      <i>VideoGrains</i> : a demo that crossfades between two videos by moving the video pixels across the screen. Uses processing's Java2D mode, which for some reason is quite slow.
-      <p>
-      <i>VideoTextureFade</i> : a demo that crossfades between a series of videos all playing concurrently. Controls let you change the position and playback speed of any of the videos. Includes a basic timing framework for controlling the timing of video effects, etc.
-      <p>
-      Please feel free to contribute to the demos section. I welcome any demonstration code or links to projects built with the jmcvideo library.
-      <p>
-      <a class="subtitle">downloads for JOGL</a>
-      <p>
-       coming soon...
-      <p>
-        <a class="subtitle">
-          javadocs
-        </a>
-        <p>
-      Browsable javadocs can be found <a href="http://www.mat.ucsb.edu/~a.forbes/PROCESSING/jmcvideo/javadocs">
-        here</a>.
+      - gotchas
+      - singularities at distance == 0 (causes divide by 0)
+      - use an epsilon factor to compensate
+
+
+      neighborhoods of points
+      - nearest neighbor
+      - quantized grids
+      - brute force
+      - DT/VD
+      - meaning of proximity shifted from nearest neighbor
+      - computational aspect
+      - how it is constructed
+      - how it encodes information
 
       <p>
 
+      W1  Graphics OpenGL + Matrices - ANGUS
 
-      <a class="subtitle">source code and svn repository</a>
-      <p>You can browse the source code online
-      <a href="https://svn.mat.ucsb.edu/projects/jmcvideo">here</a>
-      or checkout the code from svn like so:
-      <p>> svn co https://svn.mat.ucsb.edu/svn/jmcvideo
-      <p>
-       <a class="subtitle">installation for Processing</a>
-       <p>
-      1)
-        Place the zip file inside your local Processing "sketch" folder.
-        Then unzip the jmcvideo zip and rename the file so that you have a correct
-        path to the library files. For example, if you downloaded the
-        "libraries_macosx" folder as "libraries" directly in your sketch directory.
-        The full path will look something like this:
-        <div style="margin-left:20px;">
-        /Users/yourName/Documents/Processing/libraries/jmcvideo/library/
-        </div>
-        <br>
+      Lab  OpenGL, introduction to spatial issues
+      W2  Intro to Computational Geometry in 2D - ANGUS
 
-        This folder will contain various files, depending upon which version
-        you downloaded.
-        For instance, the list of files for OSX are:
-        <p>
-        <div style="margin-left:20px;">
-          jmc.jar
-        <br>
-          jmcServerDaemon
-        <br>
-          jmcvideo.jar
-        <br>
-          libCoreVideoSupport.jnilib
-        <br>
-          libDecora-SSE.jnilib
-        <br>
-          libon2_decoder.jnilib
-        </div>
-        <p>
-        I believe that all the JMC libraries are open source, so I am including them
-        here for convenience. You can also get them by downloading JavaFX.
-        <p>
-        2)
-          Add "import jmcvideo.*;" to any of your programs that use the jmcvideo library.
-          See the demo sketches above for examples.
-        <p>
-       <a class="subtitle">issues / to do</a>
-       <p>
-      1) .mp4 files update slowly (at least under OS X). There seems to be an issue with how JMC handles these files, or perhaps I am not specifying the correct image format. The sound is working fine, but the frames are only being updated every 300ms on average.
-      <br>
-      2) the JavaFX jmc update 1.0.1 seems to break the ability to break the seek and setRate functionality!! Because I like to play videos backwards I am including the 1.0.0 version of jmc until these issues are resolved.
-      <br>
-      3) jmc 1.0.1 has the ability to play MPG files on OS X (which doesn't work under 1.0.0) so you can swap to that version if you need to play those files.
-      <br>
-      4) Only some formats have the ability to play sound backwards (.MOV and .3GP I think). The other formats will play backwards but without sound.
-      <br>
-      5) Streaming HD MOV files works fine, but I haven't yet completely implemented the jmc buffering strategy. It seems a little flaky.
-      <br>
-      6) Exporting to applet and application is not working because of two reasons I think. One is a jar signing issue, and the other is that jmc requires filenames to be converted to absolute URIs, and this might not be happening when the sketch is exported.
-      <br>
-      7) As far as I can tell there is no way to get direct access to the audio data to filter it, etc. The GSVideo library might be able to do this
-      <br>
-      8) Webcam support does not yet exist, but there are rumours that an upcoming version of
-      JavaFX will include this.
+      Lab Convex Hull, Neighborhood connectivity, Voronoi/Delaunay
 
-      <p>
-      Feel free to make suggestions or point out bugs by emailing me at <a href="mailto:angus.forbes@mat.ucsb.edu">angus.forbes@mat.ucsb.edu</a>
-      or better yet through posting in the "jmcvideo"
-      <a href="http://processing.org/discourse/yabb_beta/YaBB.cgi?board=Video;action=display;num=1231145469">thread</a>
-      on the Processing forums.
-      <p>
-      <a class="subtitle">links</a>
-      <p>
+      How to divide up space, how things intersect, nearest neighbors
+      W3 2D continued (Ways of using them) - ANGUS
 
-      <a href="http://www.processing.org">processing</a> - open source programming language
-      <br>
-      <a href="http://www.javafx.com">javafx</a> - javafx sdk download
-      <br>
-      <a href="https://jogl.dev.java.net">jogl</a> - java bindings to opengl
-      <br>
-      <a href="http://users.design.ucla.edu/~acolubri/processing/gsvideo/home">gsvideo</a> - another cross-platform video library
-      <br>
-      <a href="http://www.pushing-pixels.org/?p=909">pushing pixels</a> - great blog entry about JMC
-      <br>
-      <a href="http://www.informit.com/articles/printerfriendly.aspx?p=1326515">informIT article</a> - list of function signatures for JMC
-      <br>
-      <a href="http://www.kochobisexual.com">kochobisexual</a> - some video samples were recorded on my cellphone at a kocho show in NY
-      <br>
-      <a href="http://www.heatdeath.info.com">heat death</a> - some video samples were recorded at a heat death show in Santa Barbara
-      <p>
-      <a href="http://www.mat.ucsb.edu/~a.forbes">angus forbes</a> - my portfolio<br>
+      Lab     extracting information from Voronoi/Delaunay
 
+      W4 Dynamics: How to Move through Space 3D - WES
+
+      Lab Interpolation, numerical methods (integration)
+      Research exercise from w4 to w6
+
+      W5 Move Through Space Continued 3D - ANGUS
+
+      Lab     vector fields, sampling
+
+      W6 Rotation/Orientation - WES
+
+      Lab  Rotation Matrices, Euler angles
+      W7 Rotation/Orientation (Continued) - WES
+
+      Lab  axis-angle, quaternions
+      W8 How to InterPolate Rotation/Orientation - WES
+
+      Lab     slerp, orientation in time
+
+      W9 Surfaces - ANGUS
+
+      Lab     mathematical surfaces, isosurfaces
+
+      W10 Collisions - WES
+
+      Lab     collisions in 3D, agents, …
+
+      W11  Final Project at the end
     </div>
   </body>
 </html><br>
