@@ -43,8 +43,8 @@ float x = -0f;
 float y = -0f;
 float w = 80f;
 float h = 80f;
-float[] objectPt = new float[]{
-  w/2, h/2, 0f, 0f};
+float[] objectPt = new float[]{ w/2, h/2, 0f, 1f };
+//float[] objectPt = new float[]{ 0f, 0f, 0f, 0f };
 
 float[] modelviewPt = new float[4];
 float[] clipPt = new float[4];
@@ -111,6 +111,7 @@ void setObjectMatrix()
 {
   pushMatrix();
   {
+    resetMatrix();
     transformObject();
     objectMatrix = pgl.modelview.get(objectMatrix);
   }
@@ -141,10 +142,11 @@ void drawCoordinates()
   int yPx = height - hPx;
 
   displayVecData("obj", objectPt,  0, yPx, 40, hPx);
-  displayMatrixData("object matrix", objectMatrix, 50, yPx, 150, hPx);
+  displayMatrixData("model matrix", objectMatrix, 50, yPx, 150, hPx);
   displayMatrixData("view matrix", viewMatrix, 200, yPx, 150, hPx);
   displayMatrixData("modelview matrix", modelviewMatrix, 350, yPx, 150, hPx);
 
+  //float[] hPt = new float[]{objectPt[0], objectPt[1], objectPt[2], 0f}; 
   modelviewPt = MatrixUtils.multiplyMatrixByVector(modelviewMatrix, objectPt);
   displayVecData("eye", modelviewPt,  510, yPx, 40, hPx);
 
@@ -190,17 +192,28 @@ void draw()
     
     modelviewMatrix = pgl.modelview.get(modelviewMatrix); //store modelview matrix
     
-    noStroke();
-    fill(255,0,0);
-
+    
     //draw object
-    beginShape(QUADS);
+    beginShape(LINES);
+    stroke(255,0,0);
+    
     vertex(x, y, 0.0);
     vertex(x + w, y, 0.0);
-    vertex(x + w, y + h, 0.0);
+    
+    stroke(0,255,0);
+    vertex(x, y, 0.0);
     vertex(x, y + h, 0.0);
+    
+    stroke(0,0,255);
+    vertex(x, y, 0.0);
+    vertex(x, y, w);
     endShape();
-
+    
+    textFont(f2);
+    text("+x", w, 0, 0);
+    text("+y", 0, h, 0);
+    text("+z", 0, 0, w);
+    
     //draw object point (the center of the square)
     fill(0,0,255);
     beginShape(QUADS);
