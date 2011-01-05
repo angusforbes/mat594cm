@@ -1,24 +1,26 @@
-
+ 
 div.container {min-height:10em;
     display: table-cell;
     vertical-align: middle;
     border:2px solid black;
 }
-
+ 
 a:link{
-    color: black;
+	color:#2012A9;
+   /* color: black;*/
 }
 a:link:hover{
-    color:black;
+	color:black;
 }
 a:visited{
-    color: black;
+	color:#2012A9;
+   /* color: black;*/
 }
 a:visited:hover{
     color:black;
-	}
-
-
+}
+ 
+ 
 .main
 {
     background:white; /*#b4d5fe;*/ /*white*/;
@@ -32,13 +34,19 @@ a:visited:hover{
     /*width:619px;*/
     margin-left:10px;
     margin-right:15px;
-
+    width: 680px;
+ 
   text-align:justify;
   text-align:left;
-
+ 
 }
-
-
+ 
+.topic
+{
+    margin-top:40px;
+    margin-bottom:40px;
+}
+ 
 .week
 {
     font-size:14px;
@@ -47,7 +55,7 @@ a:visited:hover{
     color:#4790be;
     color:black;
 }
-
+ 
 .title1
 {
     font-size:24px; /*1.1em;*/
@@ -56,7 +64,7 @@ a:visited:hover{
     color:#4790be;
     color:black;
 }
-
+ 
 .title2
 {
     font-size:16px; /*1.1em;*/
@@ -67,5 +75,6 @@ a:visited:hover{
     color:#54A754;
     color:black;
 }
-
+ 
+ 
 

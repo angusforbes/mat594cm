@@ -1,239 +1,498 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
+"http://www.w3.org/TR/html4/loose.dtd"> 
 
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>MAT 594CM : Computational Methods in Space and Form</title>
-    <link rel="stylesheet" type="text/css" href="mat594cm.css" />
+<html> 
+  <head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title>MAT 594CM : Real-Time Graphics Programming </title> 
+    <link rel="stylesheet" type="text/css" href="201B.css" /> 
 
-  </head>
-  <body>
-    <div class="main">
-      <!--<a class="title1">Computational Methods: Space and Form</a>-->
-      <a class="title1">Fundamentals of Spatial Computing</a>
+  </head> 
+  <body> 
+
+    <div class="main"> 
+      <a class="title1">Real-Time Graphics Programming</a> 
+      <br> 
+      <a class="title2">MAT 594CM W2011 _ W 10-2 _ Music 2215</a><p> 
+
+
+      <a class="title2">Angus Forbes, Instructor</a> 
       <br>
-      <a class="title2">MAT 594CM S2009</a>
+      angus.forbes@mat.ucsb.edu
+      <p>
+
+      <p>&nbsp;<p> 
+
+      <a class="week">Description</a> 
+      <br> 
+
+      This course introduces fundamental concepts in real-time computer graphics programming. The goal of the course is to provide students with a solid foundation in programming techniques as well as to introduce various approaches to representing, manipulating, and thinking about form and space. Students will become thoroughly acquainted with the OpenGL library and the GLSL shading language while investigating lighting models, texturing, curves and surfaces, dynamics, space partitioning, geometric data structures, and animation, as well as other related topics.  
+      In addition to frequent varied assignments that include reading, quizzes, short programming exercises, collaborative experiments and a research presentation, students will be graded on the technical and creative aspects of a final project. Each class will include both a lectures and a programming lab. Students should have experience programming in a high-level object-oriented language, such as Java or C++. All students are required to bring a laptop to each class in order to participate in programming exercises. 
+
+      <p>
+      <p> 
+      Please subscribe to the MAT 594CM Winter 2011
+      <a href="http://www.mat.ucsb.edu/forum/viewforum.php?f=48">class forum</a> (go 
+      <a href="http://www.mat.ucsb.edu/forum/viewtopic.php?f=17&t=12">here</a> for information on how to subscribe to the forum).
+      Announcements and assignments will posted there, along with links to
+      articles, code, and other resources.
+
+
+
+      <div class="topic"> 
+	<a class="week">Week 0: Course Overview</a> 
+
+	<br> 
+	Topics: Introduction to OpenGL programming; The git VCS    
+
+	<br> 
+	<hr> 
+	        Links: [<a href="docs/RedBook.pdf">OpenGL Red Book (intro to OpenGL)</a>]
+        [<a href="http://www.opengl.org/resources/features/KilgardTechniques/oglpitfall/">Avoiding Pitfalls in OpenGL</a>]
+        [<a href="http://www.songho.ca/opengl/index.html">OpenGL Exposition and Tutorials</a>]
+        [<a href="http://www.opengl.org/sdk/docs/man/xhtml/">OpenGL Reference Pages</a>]
+	[<a href="http://git-scm.com/">git: the fast version control system</a>]
+	[<a href="http://github.com/">github.com</a>]
+
+	<br>
+	<hr> 
+	<!--
+	Slides: [<a href="slides/week0_thurs.pdf">9.23 pdf</a>]
+	-->
+	<hr> 
+	<!--Assignment due 09/27/10: [<a href="./assignments/ProblemSet1.html">Problem Set #1</a>]
+	-->
+      </div>
+      <div class="topic"> 
+	<a class="week">Week 1: Programming</a> 
+
+	<br> 
+	Topics: Using Processing; Object-oriented programming    
+
+	<br> 
+	<hr> 
+	Links: [<a href="http://media.smashingmagazine.com/cdn_smash/wp-content/uploads/2010/06/aboutprogramming04.jpg">Programming infographic</a>]
+	[<a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.120.4974&rep=rep1&type=pdf">The Cathedral and the Bazaar</a>]
+	[<a href="http://download.oracle.com/javase/tutorial/java/concepts/index.html">Object-Oriented Programming Concepts</a>]
+	[<a href="http://download.oracle.com/javase/tutorial/java/javaOO/index.html">Classes and Objects</a>]
+	[<a href="http://download.oracle.com/javase/tutorial/java/IandI/subclasses.html">Inheritance</a>]
+	[<a href="http://processing.org/learning/objects/">I'm Down with OOP</a>]
+	<br>
+
+	<hr> 
+	Slides: 
+	[<a href="slides/week1_tues.pdf">9.28 pdf</a>]
+	[<a href="slides/week1_thurs.pdf">9.30 pdf</a>]
+	<hr> 
+	Assignment due 10/05/10: [<a href="./assignments/Quiz1.html">Quiz #1</a>]
+	[<a href="./assignments/ProblemSet2.html">Problem Set #2</a>]
+
+
+	<br>
+
+	<br>
+
+
+      </div> 
+
+      <div class="topic"> 
+	<a class="week">Week 2: 2D Graphics &amp; Interactivity</a> 
+
+	<br> 
+	Topics: Using Java; Swing; Java2D; Graphical user interfaces; Editors &amp; IDEs     
+	<br>
+	<hr> 
+	Links: [<a href="http://james-iry.blogspot.com/2009/05/brief-incomplete-and-mostly-wrong.html">A Brief, Incomplete, and Mostly Wrong History of Programming Languages</a>] 
+	[<a href="http://toastytech.com/guis/index.html">Toastytech GUI Gallery</a>]
+	[<a href="http://www.sojamo.de/libraries/controlP5/">controlP5 GUI library</a>]
+	[<a href="http://processing.org/learning/eclipse/">Processing w/Eclipse tutorial</a>]
+	[<a href="http://download.oracle.com/javase/tutorial/uiswing/index.html">The Swing Tutorial</a>]
+	[<a href="http://download.java.net/javadesktop/swingset3/SwingSet3.jnlp">SwingSet3 Demo</a>]
+	[<a href="http://swinglabs.org/">Swing Labs</a>]
+	[Java2D docs: 
+	<a href="http://download.oracle.com/javase/6/docs/api/java/awt/Graphics.html">Graphics</a> 
+	<a href="http://download.oracle.com/javase/6/docs/api/java/awt/Graphics2D.html">Graphics2D</a>
+	<a href="http://download.oracle.com/javase/6/docs/api/java/awt/Shape.html">Shape</a>]
+	[<a href="http://qtjambi.sourceforge.net/">Qt-Jambi</a>]
+	[<a href="http://doc.trolltech.com/qtjambi-4.5.0_01/com/trolltech/qt/qtjambi-index.html">Qt-Jambi reference documentation</a>]
+
+
+	<br>
+
+
+	<br>
+	<hr>
+	Slides: 
+	[<a href="slides/week2_tues.pdf">10.5+7 pdf</a>]
+	<hr> 
+	Assignment due 10/12/10: [<a href="./assignments/ProblemSet3.html">Problem Set #3</a>]
+
+      </div> 
+
+      <div class="topic"> 
+	<a class="week">Week 3: Data Structures</a> 
+
+	<br> 
+	Topics: Lists, sets, maps, stacks, queues, trees, graphs; Recursion   
+	<br><hr>
+	Links: 
+	[<a href="http://download.oracle.com/javase/tutorial/collections/TOC.html">The Java Collections Tutorial</a>]
+	[<a href="http://download.oracle.com/javase/tutorial/collections/implementations/index.html">Implementations</a>]
+	[<a href="http://download.oracle.com/javase/tutorial/java/IandI/createinterface.html">Interfaces</a>]
+	[<a href="http://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist">Stack Overflow: LinkedList or ArrayList?</a>]
+	[<a href="http://en.wikipedia.org/wiki/Hash_table">Wikipedia's "hash table" entry</a>]
+	[<a href="http://video.google.com/videoplay?docid=-727485696209877198&q=source:014117792397255896270&hl=en#">MIT lecture on hashing</a>]
+
+
+	<br>
+	<hr>
+	Slides: 
+	[<a href="slides/week3_tues.pdf">10.12+14 pdf</a>]
+	<hr> 
+	Assignment due 10/12/10:  [<a href="./assignments/Quiz2.html">Quiz #2</a>] [<a href="./assignments/ProblemSet4.html">Problem Set #4</a>]
+
+
+      </div> 
+
+      <div class="topic"> 
+	<a class="week">Week 4: Introduction to Network Programming</a> 
+
+	<br> 
+	Topics: sockets, streams, ports, threads, io    
+
+	<br><hr>Links: [<a href="http://download.oracle.com/javase/tutorial/networking/overview/networking.html">Java Networking Tutorial</a>]
+	[<a href="http://tools.ietf.org/html/">Internet Engineering Task Force RFCs</a>]
+	[<a href="http://www.prasannatech.net/2008/07/socket-programming-tutorial.html">Prasanna's Generic Socket Programming Tutorial</a>]
+	[<a href="http://www.java-tips.org/java-se-tips/java.util/scanning-text-with-java.util.scanner-3.html">Java-Tip's Scanner tip</a>]
+	[<a href="http://download.oracle.com/javase/tutorial/essential/exceptions/">Java Exceptions Tutorial</a>]
+	[<a href="http://onjava.com/pub/a/onjava/2003/11/19/exceptions.html">Gunjan Doshi's Best Practices for Exception Handling</a>]
+
+	<br>
+	<hr>
+	Assignment due 11/2/10:  [<a href="./assignments/ProblemSet5.html">Problem Set #5</a>]
+
+      </div> 
+
+
+
+      <div class="topic"> 
+	<a class="week">Week 5: Audio Libraries; Computer Vision; C/C++ Programming</a> 
+
+	<br> 
+	Topics: C/C++ Programming; Audio APIs; OpenCV   
+
+	<br><hr>Links: 
+	[<a href="http://www.cse.ucsc.edu/~karplus/papers/digitar.pdf">Digital Synthesis of Plucked-String and Drum Timbres</a>]
+	[<a href="http://www.jaffe.com/Jaffe-Smith-Extensions-CMJ-1983.pdf">Extensions of the Karplus-Stron Plucked-String Algorithm</a>]
+	[<a href="http://opencv.jp/opencv-1.0.0_org/docs/papers/camshift.pdf">Computer Vision Face Tracking for Use in a Perceptual User Interface</a>]
+
+
+	<br><hr>Slides: 
+	[<a href="slides/PAPresentation.pdf">PortAudio pdf</a>]
+	[<a href="slides/OpenCVLecture.pdf">OpenCV pdf</a>]
+	<br><hr>Code: 
+	[<a href="code/PAcode.zip">PortAudio examples</a>]
+	[<a href="code/Opcvfiles.zip">OpenCV examples</a>]
+      </div> 
+
+
+      <div class="topic"> 
+	<a class="week">Week 6: 3D Graphics &amp; Collaborative Experiment Presentation</a> 
+
+	<br> 
+	Topics: Into to OpenGL; Vertex Transformation; IEEE VisWeek Report      
+
+	<br><hr>Links:
+	[<a href="code/RedBook.pdf">OpenGL Red Book (intro to OpenGL)</a>]
+	[<a href="http://www.opengl.org/sdk/docs/man/xhtml/">OpenGL Reference Pages</a>]
+	[<a href="http://www.songho.ca/opengl/index.html">OpenGL Exposition and Tutorials</a>]
+	[<a href="http://www.opengl.org/resources/features/KilgardTechniques/oglpitfall/">Avoiding Pitfalls in OpenGL</a>]
+	[<a href="http://glgraphics.sourceforge.net/">GLGraphics</a>]
+
+
+	<br><hr>Slides: 
+	[<a href="slides/Week6_day1.pdf">11.2 pdf</a>]
+	[<a href="slides/Week6_day2_OpenGL.pdf">11.4 pdf</a>]
+	[<a href="slides/behaviorismInfoVis2010.pptx">behaviorism pptx</a>]
+
+	<br><hr>Processing Demos: [<a href="code/VertexTransformation.zip">Vertex Transformation</a>]
+	[<a href="code/OPENGL_ex1.zip">Lighting Demo</a>]
+	[<a href="code/OPENGL_ex2.zip">Animation Demo</a>]
+	[<a href="code/OPENGL_ex3.zip">Texture Demo</a>]
+	[<a href="code/RawOpenGL.zip">Camera/JOGL Demo</a>]
+
+
+      </div> 
+
+
+
+      <!--
+      <div class="topic"> 
+	<a class="week">Week 6: Networking Fundamentals &amp; Databases</a> 
+
+	<br> 
+	Topics: The Internet, The OSI interconnection model, Routing protocols; SQL, NoSQL, XML, JSON, Web services     
+
+      </div> 
+      -->
+
+      <div class="topic"> 
+	<a class="week">Week 7: Computer Vision, continued</a> 
+
+	<br> 
+	Topics: C/C++ Programming; OpenCV filtering &amp; feature tracking  
+
+
+	<br><hr>Slides: 
+	[<a href="slides/pointers.pdf">Pointers pdf</a>]
+	[<a href="slides/OpenCVLecture2.pdf">OpenCV pt2 pdf</a>]
+
+
+	<br><hr>Code: 
+	[<a href="code/OpenCVDemos2.zip">OpenCV examples</a>]
+
+	<hr>
+	Research Presentation due 11/18/10 &amp; Final Project due 12/9/10:  [<a href="./assignments/ResearchProject.html">Research &amp; Implementation</a>]
+      </div>
+
+
+
+      <div class="topic"> 
+	<a class="week">Week 8: Algorithms &amp; 3D Graphics, continued &amp; Research Presentations</a> 
+
+	<br> 
+	Topics: Searching &amp; sorting; Object picking &amp; dragging
+
+
+	<br><hr>Links:
+	[<a href="http://nehe.gamedev.net/data/articles/article.asp?article=13">Nehe's gluUnProject lesson</a>]
+	[<a href="http://www.opengl.org/wiki/GluProject_and_gluUnProject_code">gluProject &amp; gluUnProject source code</a>]
+	[<a href="http://www.lighthouse3d.com/opengl/picking/">Lighthouse3D picking tutorial</a>]
+	[<a href="http://en.wikipedia.org/wiki/Tree_traversal">Tree Traversal</a>]
+	[<a href="http://en.wikipedia.org/wiki/Depth-first_search">DFS</a>]
+	[<a href="http://en.wikipedia.org/wiki/Breadth-first_search">BFS</a>]
+	[<a href="http://en.wikipedia.org/wiki/A*_search_algorithm">A*</a>]
+
+
+	<br><hr>Code: [<a href="code/UnprojectDragDemo.zip">Processing Picking/Unproject demo</a>]
+	[<a href="code/JoglPicking.java">JOGL Picking demo</a>]
+	[<a href="code/searchstrategies.tar">DFS/BFS example</a>]
+	[<a href="code/setgame.tar">Set "brute force" solver</a>]
+
+	<br><hr>
+	Assignment due 12/2/10:  [<a href="./assignments/ProblemSet6.html">Problem Set #6</a>]
+      </div> 
+
+      <div class="topic"> 
+	<a class="week">Week 9: Concurrency &amp; Thanksgiving</a> 
+
+	<br> 
+	Topics: Threads; Synchronization; Concurrent data structures    
+
+	<br><hr>Links:
+	[<a href="http://en.wikipedia.org/wiki/Mutual_exclusion">Mutex</a>]
+	[<a href="http://en.wikipedia.org/wiki/Semaphore_(programming)">Semaphore</a>]
+	[<a href="http://download.oracle.com/javase/tutorial/essential/concurrency/index.html">Java Concurrency Tutorial</a>]
+
+	<br><hr>Synchronization Code Examples: [<a href="code/SynchroExA.java">A</a>]
+	[<a href="code/SynchroExA.java">B</a>]
+	[<a href="code/SynchroExA.java">C</a>]
+	[<a href="code/SynchroExA.java">D</a>]
+
+	<br><hr>Slides: 
+	[<a href="slides/Week9_tues.pdf">11.23 pdf</a>]
+
+      </div> 
+
+      <div class="topic"> 
+	<a class="week">Week 10: 3D Graphics, continued &amp; Set Solver Competition</a> 
+	<br> 
+	Topics: C programming, GLUT, projects  
+
+	<br><hr>Links:
+	[<a href="http://www.opengl.org/resources/libraries/glut/">GLUT</a>]
+	[<a href="http://www.lighthouse3d.com/opengl/glut/">Lighthouse3D GLUT tutorial</a>]
+	[<a href="http://nehe.gamedev.net/data/lessons/lesson.asp?lesson=Mac_OS_X">Nehe GLUT OSX tutorial</a>]
+	<br><hr>Slides: 
+	[<a href="slides/GLUT.pdf">11.30 pdf</a>]
+	<br><hr>Code: 
+	[<a href="code/mainGlut.c">GLUT demo</a>]
+
+	<br><hr>
+	Final portfolio due 12/2/10:  [<a href="./assignments/Portfolio.html">Portfolio</a>]
+
+      </div> 
+
+
+      <div class="topic"> 
+	<a class="week">Week 11: Final Presentation</a> 
+
+	<br> 
+
+      </div> 
+
+
+      <div class="topic">
+	<a class="title1">References &amp; Resources</a>
+	<p>
+	<a class="week">Previous Course Pages:</a><br>
+
+	<a href="http://www.mat.ucsb.edu/201B/2010/mat201b/">MAT 201B F2010</a><br>
+	<a href="http://www.mat.ucsb.edu/594cm/2009/">MAT 594CM S2009</a><br>
+	<a href="http://www.mat.ucsb.edu/~g.legrady/academic/courses/09w259/09w259.html">MAT 259 W2010</a><br>
+	<a href="http://www.mat.ucsb.edu/594cm/2010/index.html">MAT 59CM S2010</a><br>
+
+	<p>
+
+	<a class="week">Rendering:</a><br>
+	<a href="http://www.amazon.com/Real-Time-Rendering-Third-Tomas-Akenine-Moller/dp/1568814240/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1241450551&sr=8-1">Real-Time Rendering</a> /
+	<a href="http://www.realtimerendering.com/">Real-Time Rendering Resources</a><br>
+	<a href="http://www.amazon.com/Advanced-Lighting-Materials-Shaders-Dempski/dp/1556222920/ref=sr_1_1?ie=UTF8&s=books&qid=1241450649&sr=8-1">Advanced Lighting and Materials with Shaders</a><br>
+	<p>
+
+
+	<a class="week">GPU Programming:</a><br>
+	<a href="http://www.amazon.com/OpenGL-Shading-Language-Randi-Rost/dp/0321637631/">OpenGL Shading Language (The Orange Book)</a>
+	/ <a href="http://www.3dshaders.com/home/">Orange Book Resources</a><br>
+	<a href="http://developer.nvidia.com/object/GPU_Gems_Home.html">GPU Gems 1 (online)</a><br>
+	<a href="http://developer.nvidia.com/object/gpu_gems_2_home.html">GPU Gems 2 (online)</a><br>
+	<a href="http://developer.nvidia.com/object/gpu-gems-3.html">GPU Gems 3 (online)</a><br>
+	<a href="http://wiki.gamedev.net/index.php/D3DBook:Table_Of_Contents">D3D Book (online)</a><br>
+	<a href="http://tog.acm.org/resources/shaderx/">ShaderX 1-7, GPU Pro (some of these are online)</a><br>
+	<a href="http://developer.nvidia.com/object/cg_tutorial_home.html">The CG Tutorial (online)</a>
+	<p>
+
+
+	<a class="week">OpenGL &amp; Game Programming:</a><br>
+	<a href="http://www.amazon.com/OpenGL-Programming-Guide-Official-Learning/dp/0321552628/">OpenGL Programming Guide (The Red Book)</a>
+	/ <a href="docs/RedBook.pdf">(old edition available online)</a><br>
+
+	<a href="http://www.amazon.com/Interactive-Computer-Graphics-Top-Down-Approach/dp/0321535863/">Interactive Computer Graphics: A Top Down Approach</a><br>
+	<a href="http://www.gameprogramminggems.com/">Game Programming Gems 1-7, Best of</a><br>
+	<p>
+
+
+
+	<!--
+	<a href="http://www.amazon.com/Applied-Practical-Techniques-Building-Depth/dp/0321108949/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1241450787&sr=8-1">Applied C++: Practical Techniques for Building Better Software </a><br>
+	<a href="http://www.amazon.com/Modern-Design-Programming-Patterns-Depth/dp/0201704315/ref=pd_bbs_sr_1?ie=UTF8&s=books&qid=1241450600&sr=8-1">Modern C++ Design: Generic Programming and Design Patterns </a><br>
+	<a href="http://www.amazon.com/Template-Metaprogramming-Concepts-Techniques-Depth/dp/0321227255/ref=pd_bbs_4?ie=UTF8&s=books&qid=1241450600&sr=8-4">C++ Template Metaprogramming: Concepts, Tools, and Techniques from Boost and Beyond</a><p>
+	-->
+
+
+	<a class="week">General Mathematics:</a><br>
+	<a href="http://www.springerlink.com/content/u53316/">Mathematics for Computer Graphics (online, requires UCSB login)</a><br>
+	<a href="http://www.amazon.com/Mathematics-Programming-Computer-Graphics-Development/dp/1584502770/">Mathematics for 3D Game Programming and Computer Graphics</a><br>
+
+	<p>
+
+	<a class="week">Geometry:</a><br>
+	<a href="http://www.amazon.com/Beyond-Geometry-Classic-Einstein-Mathematics/dp/0486453502/">Beyond Geometry: Classic Papers from Riemann to Einstein</a><br>
+	<a href="http://www.amazon.com/Curves-Dover-books-explaining-science/dp/048623701X/">The Curves of Life</a><br>
+
+	<a href="http://www.amazon.com/Algebraic-Topology-Allen-Hatcher/dp/0521795400/">Algebraic Topology</a><br>
+	<a href="http://www.amazon.com/Curves-Surfaces-CAGD-Practical-Kaufmann/dp/1558607374/">Curves and Surfaces for CAGD: A Practical Guide</a><br>
+	<a href="http://www.springerlink.com/content/h76732/">Geometry for Computer Graphics (online, requires UCSB login)</a><br>
+	<a href="http://maven.smith.edu/~orourke/books/compgeom.html">Computational Geometry in C</a> /
+	<a href="http://maven.smith.edu/~orourke/books/ftp.html">C and Java Resources</a> <br>
+	<a href="http://www.cs.uu.nl/geobook/">Computational Geometry: Algorithms and Applications</a><br>
+	<a href="http://local.wasp.uwa.edu.au/~pbourke/geometry/">Paul Bourke's Geometry Pages</a>
+	<p>
+
+	<a class="week">Physics &amp; Simulations</a><br>
+	<a href="http://realtimecollisiondetection.net/">Real-time Collision Detection</a> <br>
+	<a href="http://apress.com/book/view/9781590594728">Physics for Game Programmers</a> / <a href="http://apress.com/book/downloadfile/2078">Resources</a><br>
+	<a href="http://www.springerlink.com/content/v5q202/">Vector Analysis for Computer Graphics (online, requires UCSB login)</a><br>
+	<p>
+
+	<a class="week">Rotations:</a><br>
+	<a href="http://www.amazon.com/Quaternions-Rotation-Sequences-Applications-Aerospace/dp/0691102988/">Quaternions and Rotation Sequences: A Primer with Applications to Orbits, Aerospace and Virtual Reality</a><br>
+	<a href="http://www.amazon.com/Visualizing-Quaternions-Kaufmann-Interactive-Technology/dp/0120884003/">Visualizing Quaternions</a><br>
+	<a href="http://www.amazon.com/Rotations-Quaternions-Double-Groups-Altmann/dp/0486445186/">Rotations, Quaternions, and Double Groups </a>
+	<p>
+
+
+
+	<a class="week">Geometric Algebra:</a><br>
+	<a href="http://www.amazon.com/Geometric-Algebra-Computer-Science-Revised/dp/0123749425/">Geometric Algebra for Computer Science: An Object-Oriented Approach to Geometry</a>
+	/ <a href="http://www.geometricalgebra.net/">Resources</a><br>
+	<a href="http://www.springerlink.com/content/p72753/">Geometric Algebra: An Algebraic System for Computer Games and Animation (online, requires UCSB login)</a><br>
+	<a href="http://www.amazon.com/Geometric-Algebra-Physicists-Chris-Doran/dp/0521715954/">Geometric Algebra for Physicists </a>
+	<p>
+
+
+
+	<a class="week">Generative Processes:</a><br>
+	<a href="http://www.amazon.com/Self-Made-Tapestry-Pattern-Formation-Nature/dp/0198502435/">The Self-Made Tapestry: Pattern Formation in Nature</a><br>
+	<a href="http://www.amazon.com/Pamphlet-Architecture-27-Benjamin-Aranda/dp/1568985479/">Pamphlet Architecture 27: Tooling</a><br>
+	<a href="http://www.amazon.com/Protocells-Bridging-Nonliving-Living-Matter/dp/0262182688/">Protocells</a>
+	<p>
+
+	<a class="week">Git:</a><br> 
+	<a href="http://git-scm.com/">git home page</a><br>
+	<a href="http://gitref.org/">git Reference</a> <br>
+	<a href="http://github.com/">github.com</a> &amp; <a href="http://help.github.com/">github help</a> <br>
+	<a href="http://en.wikipedia.org/wiki/Git_(software)">git Wikipedia entry</a><br>
+
+	<p> 
+
+      </div>
+
+
+      <p> 
+      <a class="week">Audio Programming:</a><br> 
+      <a href="http://www.portaudio.com/">Port Audio</a><br>
+
+      <a href="http://www.music.mcgill.ca/~gary/rtaudio/">RTAudio</a><br>
+      <a href="http://www.rawmaterialsoftware.com/juce.php">JUCE</a><br>
+      <a href="http://www.mega-nerd.com/libsndfile/">libsnfile</a><br>
+      <a href="http://www-mmsp.ece.mcgill.ca/documents/Software/Packages/libtsp/libtsp.html">libtsp</a><br>
+
+      <a href="http://www.amazon.com/Sound-Synthesis-Interactive-Applications-CD-ROM/dp/1568811683">Real Sound Synthesis for Interactive Applications, Perry Cook</a><br>
+
+
+
+      <p> 
+      <a class="week">SSH:</a><br> 
+      <a href="http://en.wikipedia.org/wiki/Secure_Shell">Secure Shell Wikipedia entry</a><br>
+      <a href="http://en.wikipedia.org/wiki/Public-key_cryptography">Public-key cryptography Wikipedia entry</a><br>
+
+
+
+      <p> 
+      <a class="week">IDEs &amp; Coding Tools:</a><br> 
+      <a href="http://developer.apple.com/technologies/tools/xcode.html">XCode 3</a><br>
+      <a href="http://www.eclipse.org/">Eclipse Helios</a><br>
+      <a href="http://netbeans.org/">Netbeans 6.9</a><br>
+      <a href="http://www.vim.org/">Vim 7.3</a> / <a href="http://github.com/b4winckler/macvim">MacVim 7.3</a><br>
+      <a href="http://macromates.com/">TextMate 1.5.9</a><br>
+
+
+
       <br>
 
-      <a class="title2">Angus Forbes & Wesley Smith, Instructors</a>
-      <p>&nbsp;<p>
-
-      <img width=140 height=140 src="process1a_thumb.jpg"/>
-      <img width=140 height=140 src="process1d_thumb.jpg"/>
-      <img width=140 height=140 src="process1c_thumb.jpg"/>
-      <img width=140 height=140 src="process1b_thumb.jpg"/>
-      <p>&nbsp;<p>
-      <a class="week">Description</a>
-      <p>
-
-      This course provides a foundation for computing in multidimensional
-      spaces, investigating the synthetic and generative potentials of
-      elementary geometric constructs.  Subjects covered will include vector
-      and matrix math, space partitioning, collision detection, and
-      kinematics.  We will focus both on mathematical foundations and
-      practical computational techniques for creating real-time 3D graphics
-      via OpenGL.
-      <p> Students will produce a number of investigations into the
-      topics covered, culminating in a final programming project.  No
-      prerequisites are required, although some basic knowledge of
-      programming is assumed. The course will consist of one lecture class
-      and one lab class per week.
-
-
-      <p>
-
-      <a class="week">Week 1: Space Math</a>
-
-      <br>
-      <i>
-      How to project a 3D space on a 2D plane.
-      Navigating a 3D space.
-      </i>
-      <p>
-
-      Topics: Introduction to openGL, vectors, matrices, homogeneous coordinates,
-      affine transformations, perspective, virtual cameras.
-      <p>
-      Lecture notes: [slides.pdf] [slides.ppt]
-      <br>
-      Example code: [ModelviewDemo.pde] [ProjectionDemo.pde]
-      <br>
-      Links: [] [] 
-      [<a href="homog-coords.pdf">Homogeneous Coordinates.pdf</a>]
-      
-      http://en.wikipedia.org/wiki/Affine_transformation
-     
-     <p>
-
-      <a class="week">Week 2: Thinking in Plane</a>
-      <br>
-      <i>How to reason efficiently about objects in 2D space.
-      Algorithms for bounding, intersecting, and partitioning simple polygons.
-      </i>
-      <p>
-      Topics: Determinants, the dot product, convex hull algorithms, voronoi diagrams and delaunay triangulation.
-      <p>
-      Lecture notes: [slides.pdf] [slides.ppt]
-      <br>
-      Example code: [FortuneVoronoi.pde] [ConvexHull_1.pde] [ConvexHull_2.pde] [Triangulate.pde]
-      <br>
-      Links: [] [] []
-      <p>
-
-      <a class="week">Week 3: Curve Math</a>
-      <p>
-      Topics: Parametric curves, Bezier curves, Cubic Splines, NURBS Curves, animation over curves.
-      <p>
-      [Problem Set #1] due Thursday
-      <p>
-
-      <a class="week">Week 4: Shape Math</a>
-      <p>
-      Parametric surfaces, subdivision surfaces.
-      <p>
-      Example Code:
-      <p>
-        
-      <a class="week">Week 5: Thinking in Space</a>
-      <p>
-      Collision detection, BSP, 3D Vornoi, 3D Convex Hull
-      <p>
-      [Project #1] due Thursday
-      <p>
-
-      <a class="week">Week 6: Rotation Math</a>
-      <p>
-      Rotation matrices, Euler angles, axis-angle, quaternions, interpolation
-      <p>
-      
-      <a class="week">Week 7: Flow Math</a>
-      <p>
-      Vector fields, dynamics
-      <p>
-      [Research Presentation] fist half of Thursday's class
-      <p>
-        
-      <a class="week">Week 8: Fluid Math</a>
-      <p>
-      Navier-Stokes, water simulation, smoke simulation, 
-      solving linear systems of equations, numerical methods to approximate partial differential equations. 
-      <p>
-     
-      <a class="week">Week 9: Light Code</a>
-      <p>
-      Introduction to GLSL, per-pixel light models
-      <p>
-
-      <a class="week">Week 10: Lab sessions</a>
-      <p>
-      [Project #2] presentations Thursday
-      <p>
 
 
 
-      matrices
-      - 3x3 as a vector space
-      - 4x4 as a homogenous vector space
-      - how to construct orthogonal vector spaces
-      - conditions under which transpose == inverse and it's application in graphics
-      - e.g. gl_ModelViewMatrix == gl_NormalMatrix when scale is (1., 1., 1.)
-      - billboarding
 
 
-      vectors
-      - normalized
-      - how to handle the edge cases where magnitde ~ precision of float type
-      - cross product/dot product/geometric product
-      - meaning and usefulness
-      - sphere/ray intersection
-      - 3D picking
 
-      - how to stroke a path (defined in 2d, ambiguous in 3d)
+      <!--	
+      <a class="week">Generative Processes:</a><br> 
+      <a href="http://www.amazon.com/Self-Made-Tapestry-Pattern-Formation-Nature/dp/0198502435/">The Self-Made Tapestry: Pattern Formation in Nature</a><br> 
+      <a href="http://www.amazon.com/Pamphlet-Architecture-27-Benjamin-Aranda/dp/1568985479/">Pamphlet Architecture 27: Tooling</a><br> 
+      <a href="http://www.amazon.com/Protocells-Bridging-Nonliving-Living-Matter/dp/0262182688/">Protocells</a> 
+      <p> 
+      -->
+    </div> 
+  </div> 
+</body> 
 
+</html> 
 
-      composing vector fields
-      - gravity
-      - planetary
-      - magentic
-      - vortex
-      - stochastic
-      - perlin noise
-      - gaussian
-      - ...
-
-      - emitters
-      - point
-      - spherical
-      - cube
-      - line
-
-      - integration techniques
-      - discrete calculus
-      - euler (explicit/implicit)
-      - R-K
-      - verlet
-      - when/where to apply
-
-      - steering behaviors
-
-      - gotchas
-      - singularities at distance == 0 (causes divide by 0)
-      - use an epsilon factor to compensate
+<!-- artists:
+http://roberthodgin.com/
 
 
-      neighborhoods of points
-      - nearest neighbor
-      - quantized grids
-      - brute force
-      - DT/VD
-      - meaning of proximity shifted from nearest neighbor
-      - computational aspect
-      - how it is constructed
-      - how it encodes information
+-->
 
-      <p>
-
-      W1  Graphics OpenGL + Matrices - ANGUS
-
-      Lab  OpenGL, introduction to spatial issues
-      W2  Intro to Computational Geometry in 2D - ANGUS
-
-      Lab Convex Hull, Neighborhood connectivity, Voronoi/Delaunay
-
-      How to divide up space, how things intersect, nearest neighbors
-      W3 2D continued (Ways of using them) - ANGUS
-
-      Lab     extracting information from Voronoi/Delaunay
-
-      W4 Dynamics: How to Move through Space 3D - WES
-
-      Lab Interpolation, numerical methods (integration)
-      Research exercise from w4 to w6
-
-      W5 Move Through Space Continued 3D - ANGUS
-
-      Lab     vector fields, sampling
-
-      W6 Rotation/Orientation - WES
-
-      Lab  Rotation Matrices, Euler angles
-      W7 Rotation/Orientation (Continued) - WES
-
-      Lab  axis-angle, quaternions
-      W8 How to InterPolate Rotation/Orientation - WES
-
-      Lab     slerp, orientation in time
-
-      W9 Surfaces - ANGUS
-
-      Lab     mathematical surfaces, isosurfaces
-
-      W10 Collisions - WES
-
-      Lab     collisions in 3D, agents, …
-
-      W11  Final Project at the end
-    </div>
-  </body>
-</html><br>
