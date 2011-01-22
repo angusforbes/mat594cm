@@ -18,6 +18,24 @@ GLuint tex;
 float rotY = 0.0;
 float transZ = -5.0;
 
+
+void displayQuadric() {
+  glEnable( GL_TEXTURE_2D );
+  glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+  glBindTexture( GL_TEXTURE_2D, tex );    
+
+  //...sphere
+  //glRotatef(270.0, 1.0, 0.0, 0.0);
+  //gluSphere(qObj, 1.0, 64, 64);
+  
+  
+  //..cylinder.
+  glTranslatef(0.0, -1.0, 0.0);
+  glRotatef(270.0, 1.0, 0.0, 0.0);
+  gluCylinder(qObj, 1.0, .5, 2.0, 64, 64);
+}
+
+
 void display(void) {
 
   float r,x,y,a;
@@ -34,24 +52,6 @@ void display(void) {
 
   glutSwapBuffers();
 }
-
-void displayQuadric() {
-  glEnable( GL_TEXTURE_2D );
-  glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-  glBindTexture( GL_TEXTURE_2D, tex );    
-
-  //...sphere
-  //glRotatef(270.0, 1.0, 0.0, 0.0);
-  //gluSphere(qObj, 1.0, 64, 64);
-  
-  
-  //..cylinder.
-  glTranslatef(0.0, -1.0, 0.0);
-  glRotatef(270.0, 1.0, 0.0, 0.0);
-  gluCylinder(qObj, 1.0, .5, 2.0, 64, 64);
-  
-}
-
 void reshape(int width, int height)
 {
   glViewport(0, 0, width, height);

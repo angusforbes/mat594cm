@@ -7,8 +7,6 @@ void reshape(int width, int height);
 void timer(int value);
 void immediateSquare(void);
 void loadTextures(void);
-void normalizeNormal(float n[]);
-void computeNormal(float v1[], float v2[], float n[]);
 
 
 
