@@ -5,6 +5,8 @@
 void pointer1(void) {
   int z = 11;
   printf("value of 'z' = %d\n", z);
+  printf("address of 'z' = %p\n", &z);
+
   int *a = &z;
   //a points to the address of z (which now contains the int 11)
   printf("value in space that 'a' points to = %d\n", *a);
@@ -29,14 +31,14 @@ void pointer1(void) {
 
 //allocating memory
 void pointer2(void) {
-   //allocate memory using "malloc"...
-   int *ints = (int *) malloc (sizeof(int) * 3);
-   //now we have space available to place 3 ints
-   
    int a = 1;
    int b = 2;
    int c = 3;
   
+   //allocate memory using "malloc"...
+   int *ints = (int *) malloc (sizeof(int) * 3);
+   //now we have space available to place 3 ints
+   
    //lets keep track of the beginning of this space...
    int *start = ints;
    int *start2 = ints;
@@ -82,7 +84,7 @@ void pointer2(void) {
 
 //passing by value
 void foo1(int a) {
-  //this a is a brand new a with a brand new space in memory
+  //this a is a brand new "a" with a brand new space in memory
   a += 1;
 }
 

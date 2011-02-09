@@ -3,42 +3,15 @@
 #include <math.h>
 #include <soil.h>
 #include <stdio.h>
+#include "main.h"
+#include "shader.h"
 
-void keyboard(unsigned char key, int x, int y);
-void keySpecial(int key, int x, int y);
-void idle(void);
-void display(void);
-void reshape(int width, int height);
-void timer(int value);
-void immediateSquare(void);
-void loadTextures(void);
-
-GLUquadricObj *qObj;
 GLuint tex;
 float rotY = 0.0;
 float transZ = -5.0;
-
-
-void displayQuadric() {
-  glEnable( GL_TEXTURE_2D );
-  glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-  glBindTexture( GL_TEXTURE_2D, tex );    
-
-  //...sphere
-  glRotatef(270.0, 1.0, 0.0, 0.0);
-  gluSphere(qObj, 1.0, 64, 64);
-  
-  //..cylinder.
-  glTranslatef(0.0, -1.0, 0.0);
-  glRotatef(270.0, 1.0, 0.0, 0.0);
-  //gluCylinder(qObj, 1.0, .5, 2.0, 64, 64);
-}
-
+GLuint shaderProgram;
 
 void display(void) {
-
-  float r,x,y,a;
-  int th,step;
 
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
@@ -47,10 +20,15 @@ void display(void) {
   glTranslatef(0.0, 0.0, transZ);
   glRotatef(rotY, 0.0, 1.0, 0.0);
 
-  displayQuadric();
+  glUseProgram(shaderProgram);
+
+  glutSolidTeapot(1);
+  
+  glUseProgram(0);
 
   glutSwapBuffers();
 }
+
 void reshape(int width, int height)
 {
   glViewport(0, 0, width, height);
@@ -58,6 +36,7 @@ void reshape(int width, int height)
   glLoadIdentity();
   gluPerspective(45.0, (float)width / (float) height, .01, 100.0);
 }
+
 
 void loadTextures() {
   tex = SOIL_load_OGL_texture (
@@ -73,20 +52,9 @@ void loadTextures() {
   }
 }
 
-void initQuadrics() {
-  qObj = gluNewQuadric(); //load up new quadric 
-  //gluQuadricDrawStyle(qObj, GLU_FILL); //fill in the facets on the surface 
-  gluQuadricNormals(qObj, GLU_SMOOTH); //make nice normals across the facets
-  //if lighting is enabled then the normals are already present
-  gluQuadricTexture(qObj, GL_TRUE); //automatically create texture coords for the object
-  //if you a bind a texture, then the texture coords are already present
-}
-
 void init(void) {
   glEnable(GL_DEPTH_TEST);
   glClearColor(0.0,0.0,0.0,0.0);
-  initQuadrics();
-  loadTextures();
 }
 
 
@@ -96,7 +64,7 @@ void keyboard(unsigned char key, int x, int y) {
   switch(key) {
     case 'a':
       break;
-    
+
     case 'b':
       break;
 
@@ -131,7 +99,6 @@ void keySpecial(int key, int x, int y) {
   }
 }
 
-
 void timer(int value) {
   //update things...
   rotY += 1.0;
@@ -145,6 +112,9 @@ void idle(void) {
   glutPostRedisplay();
 }
 
+void mouseMoved(int x, int y) {
+  printf("mouse at %i/%i\n", x, y);
+}
 
 int main(int argc, char** argv) {
   //set up GLUT context
@@ -159,10 +129,15 @@ int main(int argc, char** argv) {
   glutIdleFunc(idle);
   glutKeyboardFunc(keyboard);
   glutSpecialFunc(keySpecial);
+  //glutPassiveMotionFunc(mouseMoved);
   glutTimerFunc(1000/60,timer,0);
 
   //initialize state and load in resources, etc.
   init();
+
+  shaderProgram = initializeShaders("basic.vert", "basic.frag");
+
+  //printf("shaderProgram = %d\n", shaderProgram);
 
   //begin OpenGL rendering
   glutMainLoop();

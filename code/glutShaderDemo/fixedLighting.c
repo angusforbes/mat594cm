@@ -3,54 +3,66 @@
 #include <math.h>
 #include <soil.h>
 #include <stdio.h>
+#include "main.h"
 
-void keyboard(unsigned char key, int x, int y);
-void keySpecial(int key, int x, int y);
-void idle(void);
-void display(void);
-void reshape(int width, int height);
-void timer(int value);
-void immediateSquare(void);
-void loadTextures(void);
-
-GLUquadricObj *qObj;
-GLuint tex;
 float rotY = 0.0;
 float transZ = -5.0;
-
-
-void displayQuadric() {
-  glEnable( GL_TEXTURE_2D );
-  glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
-  glBindTexture( GL_TEXTURE_2D, tex );    
-
-  //...sphere
-  glRotatef(270.0, 1.0, 0.0, 0.0);
-  gluSphere(qObj, 1.0, 64, 64);
-  
-  //..cylinder.
-  glTranslatef(0.0, -1.0, 0.0);
-  glRotatef(270.0, 1.0, 0.0, 0.0);
-  //gluCylinder(qObj, 1.0, .5, 2.0, 64, 64);
-}
-
+GLuint shaderProgram;
+//light position variables
+float lx = 3.0;
+float ly = 1.0;
+float lz = 2.0;
+float lw = 0.0;
 
 void display(void) {
-
-  float r,x,y,a;
-  int th,step;
 
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
-  glTranslatef(0.0, 0.0, transZ);
-  glRotatef(rotY, 0.0, 1.0, 0.0);
 
-  displayQuadric();
+  glEnable(GL_LIGHTING); 
+  glEnable(GL_LIGHT0);
+
+  setLighting();
+  setMaterial();
+
+  glTranslatef(0.0, 0.0, transZ);
+  //glRotatef(rotY, 0.0, 1.0, 0.0);
+
+  glutSolidTeapot(1);
 
   glutSwapBuffers();
 }
+
+void setLighting() {
+  float DiffuseLight[] = {1.0, 0.0, 0.0}; 
+  float AmbientLight[] = {0.2, 0.2, 0.2};
+  float SpecularLight[] = {1.0, 1.0, 1.0};
+
+  glLightfv (GL_LIGHT0, GL_SPECULAR, SpecularLight); 
+  glLightfv (GL_LIGHT0, GL_DIFFUSE, DiffuseLight); 
+  glLightfv (GL_LIGHT0, GL_AMBIENT, AmbientLight); 
+
+  float LightPosition[] = {
+    lx, ly, lz, lw  }; 
+
+  glLightfv (GL_LIGHT0, GL_POSITION, LightPosition); 
+}
+
+void setMaterial() {
+
+  float mShininess[] = {5};
+  float DiffuseMaterial[] = {1.0, 0.0, 0.0}; 
+  float AmbientMaterial[] = {0.0, 0.0, 0.0};
+  float SpecularMaterial[] = {1.0, 1.0, 1.0}; 
+
+  glMaterialfv(GL_FRONT, GL_DIFFUSE, DiffuseMaterial);
+  glMaterialfv(GL_FRONT, GL_AMBIENT, AmbientMaterial);
+  glMaterialfv(GL_FRONT, GL_SPECULAR, SpecularMaterial);
+  glMaterialfv(GL_FRONT, GL_SHININESS, mShininess);
+}
+
 void reshape(int width, int height)
 {
   glViewport(0, 0, width, height);
@@ -59,34 +71,10 @@ void reshape(int width, int height)
   gluPerspective(45.0, (float)width / (float) height, .01, 100.0);
 }
 
-void loadTextures() {
-  tex = SOIL_load_OGL_texture (
-      "imgs/img_test.jpg",
-      SOIL_LOAD_AUTO,
-      SOIL_CREATE_NEW_ID,
-      SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y 
-      );
-
-  // check for texture loading error
-  if( 0 == tex ) {
-    printf( "SOIL loading error: '%s'\n", SOIL_last_result() );
-  }
-}
-
-void initQuadrics() {
-  qObj = gluNewQuadric(); //load up new quadric 
-  //gluQuadricDrawStyle(qObj, GLU_FILL); //fill in the facets on the surface 
-  gluQuadricNormals(qObj, GLU_SMOOTH); //make nice normals across the facets
-  //if lighting is enabled then the normals are already present
-  gluQuadricTexture(qObj, GL_TRUE); //automatically create texture coords for the object
-  //if you a bind a texture, then the texture coords are already present
-}
 
 void init(void) {
   glEnable(GL_DEPTH_TEST);
   glClearColor(0.0,0.0,0.0,0.0);
-  initQuadrics();
-  loadTextures();
 }
 
 
@@ -96,7 +84,7 @@ void keyboard(unsigned char key, int x, int y) {
   switch(key) {
     case 'a':
       break;
-    
+
     case 'b':
       break;
 
@@ -131,7 +119,6 @@ void keySpecial(int key, int x, int y) {
   }
 }
 
-
 void timer(int value) {
   //update things...
   rotY += 1.0;
@@ -145,6 +132,9 @@ void idle(void) {
   glutPostRedisplay();
 }
 
+void mouseMoved(int x, int y) {
+  printf("mouse at %i/%i\n", x, y);
+}
 
 int main(int argc, char** argv) {
   //set up GLUT context
@@ -159,6 +149,7 @@ int main(int argc, char** argv) {
   glutIdleFunc(idle);
   glutKeyboardFunc(keyboard);
   glutSpecialFunc(keySpecial);
+  //glutPassiveMotionFunc(mouseMoved);
   glutTimerFunc(1000/60,timer,0);
 
   //initialize state and load in resources, etc.
