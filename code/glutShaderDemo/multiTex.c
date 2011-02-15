@@ -234,7 +234,7 @@ void initializeTiles(void) {
     for (j = 0; j < rows; j++) {
       tiles[i][j].xpos = sx + (xinc * i);     
       tiles[i][j].ypos = sy + (yinc * j); 
-      tiles[i][j].rate = randfloat(.0001, .0003);
+      tiles[i][j].rate = randfloat(.001, .003);
       tiles[i][j].opacity = .5;
     }
   }

@@ -1,3 +1,4 @@
+void bumpMap(void); 
 void setLighting(void); 
 void setMaterial(void); 
 void multiTexture(void);

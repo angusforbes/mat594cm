@@ -28,7 +28,7 @@ void display(void) {
   setMaterial();
   
   glTranslatef(0.0, 0.0, transZ);
-  glRotatef(rotY, 0.0, 1.0, 0.0);
+  //glRotatef(rotY, 0.0, 1.0, 0.0);
 
   glutSolidTeapot(1);
 
