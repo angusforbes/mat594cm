@@ -150,9 +150,9 @@ void init(void) {
   glClearColor(0.0,0.0,0.0,0.0);
   //tex_color = loadTexture("brickwall_colormap.jpg");
   //tex_normal = loadTexture("brickwall_normalmap.png");
-  //tex_color = loadTexture("colour_map.png");
+  tex_color = loadTexture("colour_map.png");
   //tex_normal = loadTexture("normal_map.png");
-  tex_color = loadTexture("retired-bricks.jpg");
+  //tex_color = loadTexture("retired-bricks.jpg");
   tex_normal = loadTexture("retired-bricks_normal.png");
   //tex_color = loadTexture("bricks_3.jpg");
   //tex_normal = loadTexture("bricks_3_normalmap.png");
